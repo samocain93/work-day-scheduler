@@ -8,6 +8,11 @@
 
 $(document).ready(function () {
 
+
+  $(".saveBtn").on("click", function() {
+    var textInfo = $(this).siblings(".description").val();
+   localStorage.setItem("textInfo", textInfo)
+  })
   //  var to display current date in header 
   var now = dayjs().format("MMMM D, YYYY")
 
@@ -29,15 +34,15 @@ $(document).ready(function () {
 
   // set up function to compare time id to current hour
 
-  $(".time-block").each(function() {
-    console.log($("time-block").val())
-  })
+  // $(".time-block").each(function() {
+  //   console.log($("time-block").val())
+  // })
 
-  console.log()
-
-
+  // console.log()
 
 
+
+// $(#id.description).val
 
 
 
@@ -48,7 +53,7 @@ $(document).ready(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
 
-
+// localStorage.setItem(time, value)
 
 
 
