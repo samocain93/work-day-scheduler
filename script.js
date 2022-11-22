@@ -5,14 +5,34 @@
 
 
 
-
 $(document).ready(function () {
 
 
-  $(".saveBtn").on("click", function() {
-    var textInfo = $(this).siblings(".description").val();
-   localStorage.setItem("textInfo", textInfo)
+
+//Gets values from textarea and saves to local storage
+  // $(".saveBtn").on("click", function(event) {
+  //   event.preventDefault();
+  //   var value = $(this).siblings(".description").val();
+  //   var time = $(this).parent().attr("id").split("-")[1];
+  //  localStorage.setItem(time, value)
+  // })
+  // $(".saveBtn").on("click", function(event) {
+  //   event.preventDefault();
+  //   var value = $(this).siblings(".description").val();
+  //   var time = $(this).parent().attr("id").split("-")[1];
+  //  localStorage.setItem(time, value)
+  // })
+
+  $(".saveBtn").on("click", function(event) {
+    event.preventDefault();
+    var value = $(this).siblings(".description").val();
+    var time = $(this).siblings(".description").attr("id")
+   localStorage.setItem(time, value)
   })
+
+
+
+
   //  var to display current date in header 
   var now = dayjs().format("MMMM D, YYYY")
 
