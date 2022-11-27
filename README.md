@@ -12,7 +12,7 @@ the events will still remain.
 
 You can visit and test out the planner at the following GitHub page link provided: https://samocain93.github.io/work-day-scheduler/
 
-```md
 ![home page of planner](assets/images/project-screenshot.png)
+
 
 
